@@ -1,28 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
+import react from 'react';
 import {Button, StyleSheet, Text, View, TextInput } from 'react-native';
 
 export default function App() {
-  const title = 'Todo';
+  const title = 'Todo App';
   return (
     <View style={styles.container}>
+        <View style={styles.header}>
+            <Text style={{ color : 'white'}}>hello</Text>
+        </View>
         <Text>Start a new {title}</Text>
-        <TextInput
-          style={{
-            height:40,
-            width:380,
-            borderWidth:2
-          }}
-          defaultValue='Type here...'
-        />
-      <Button
-        onPress={() => {
-          alert('You tapped the button!');
-        }}
-        title="Press Me"
-      />
-        <View style={{
-            width: 50, height: 50,marginTop:100, backgroundColor: 'steelblue'
-          }} />
     </View>
   );
 }
@@ -35,4 +22,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});p
+  header:{
+    height:25,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width:100,
+    backgroundColor:'green',
+  }
+});
